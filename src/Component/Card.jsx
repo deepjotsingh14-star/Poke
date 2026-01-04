@@ -40,8 +40,10 @@ const Card = ({ elem, idx, current, total }) => {
         <div
             className="absolute left-0 w-full h-full rounded-3xl overflow-hidden bg-white border flex flex-col transition-all duration-300 ease-in-out"
             style={{
-                transform: `translateY(${-offset * 40}px) scale(${1 - offset * 0.05})`,
-                zIndex: 100 - offset,
+                   transform: `translateY(${offset * 40}px) scale(${1 - Math.abs(offset) * 0.08})`,
+                zIndex: 10 - Math.abs(offset),
+                opacity: Math.abs(offset) > 2 ? 0 : 1,
+                transition: "transform 0.4s ease, opacity 0.4s ease",
             }}
         >
             {/* IMAGE AREA */}
