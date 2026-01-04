@@ -64,9 +64,9 @@ const CardData = () => {
   }, []);
 
   return (
-    <div className="flex relative  items-center">
+    <div className="flex relative   items-center h-full w-full">
       <div
-        className="relative h-130 w-full  lg:hidden"
+        className="relative h-[80%] w-full   lg:hidden"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
         onMouseDown={handleMouseDown}

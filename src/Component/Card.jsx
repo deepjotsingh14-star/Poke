@@ -10,11 +10,11 @@ const Card = ({ elem, idx, current, total }) => {
     const color = {
         water: {
             bg: "url('/noise.svg'), radial-gradient(circle, rgba(0,86,245,1) 0%, rgba(64,131,255,1) 41%)",
-            shadow: "0 0 5rem 4rem rgba(64,131,255,0.8)",
+            shadow: "0 0 5rem 8rem rgba(64,131,255,0.8)",
         },
         fire: {
             bg: "radial-gradient(circle, rgba(255,94,0,1) 0%, rgba(255,170,64,1) 45%)",
-            shadow: "0 0 4rem 1.5rem rgba(255,120,0,0.8)",
+            shadow: "0 0 5rem 8rem rgba(255,120,0,0.8)",
         },
         grass: {
             bg: "radial-gradient(circle, rgba(0,200,83,1) 0%, rgba(100,221,170,1) 45%)",
@@ -38,16 +38,16 @@ const Card = ({ elem, idx, current, total }) => {
 
     return (
         <div
-            className="absolute left-0 w-full h-full rounded-3xl overflow-hidden bg-white border flex flex-col transition-all duration-300 ease-in-out"
+            className="absolute left-0 w-full h-full p-4 rounded-3xl overflow-hidden bg-white border flex flex-col transition-all duration-300 ease-in-out"
             style={{
-                   transform: `translateY(${offset * 40}px) scale(${1 - Math.abs(offset) * 0.08})`,
-                zIndex: 10 - Math.abs(offset),
-                opacity: Math.abs(offset) > 2 ? 0 : 1,
+                transform: `translateY(${-offset * 40}px) scale(${1 - offset * 0.05})`,
+                zIndex: 100 - offset,
+                   opacity: Math.abs(offset) > 2 ? 0 : 1,
                 transition: "transform 0.4s ease, opacity 0.4s ease",
             }}
         >
             {/* IMAGE AREA */}
-            <div className="relative h-[70%] border  w-full flex items-center justify-center">
+            <div className="relative h-full   rounded-3xl  w-full flex items-center justify-center">
                 <div className="absolute   inset-0 flex items-center justify-center">
                     <div
                         className="h-48 w-48 rounded-full  bg-cover"
@@ -57,7 +57,7 @@ const Card = ({ elem, idx, current, total }) => {
                             backgroundPosition: "center",
                         }}
                     >       </div>
-                    <div className="absolute h-full w-full backdrop-blur-2xl">
+                    <div className="absolute h-full w-full backdrop-blur-2xl border border-white/30">
 
                     </div>
                 </div>
@@ -71,8 +71,8 @@ const Card = ({ elem, idx, current, total }) => {
             </div>
 
             {/* INFO AREA */}
-            <div className="p-4 text-center">
-                <h1 className="text-2xl font-bold capitalize">{elem.name}</h1>
+            <div className="p-4  absolute h-full w-full"    >
+                <h1 className="text-[12vw]   capitalize font-[popbold] font-light   ">{elem.name}</h1>
                 <p className="text-sm text-gray-500 capitalize">{elem.types?.[0]?.type?.name}</p>
                 <p className="text-sm text-gray-500 capitalize"> {elem.types?.[1]?.type?.name || ""}</p>
             </div>
