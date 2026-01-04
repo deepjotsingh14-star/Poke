@@ -71,6 +71,7 @@ const CardData = () => {
         onTouchEnd={handleTouchEnd}
         onMouseDown={handleMouseDown}
         onMouseUp={handleMouseUp}
+  transition-transform duration-300 ease-in-out
       >
         {redata.map((elem, idx) => (
           <Card
