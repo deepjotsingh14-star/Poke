@@ -37,7 +37,7 @@ const SearchCard = () => {
 
   return (
     <div className="w-full p-2 bg-blue-500   ">
-      <div className="w-full grid lg:grid-cols-5 grid-cols-2 gap-[2rem]      "     >
+      <div className="w-full grid lg:grid-cols-5 grid-cols-2 lg:gap-[2rem]  gap-1      "     >
         {loading ? (
           <p>Loading Pokémon...</p>
         ) : filteredPokemon.length > 0 ? (

@@ -29,9 +29,9 @@ navigate(`/search?query=${search}`);
       </div>
 
       {/* Desktop Top Nav */}
-      <div className="hidden lg:flex fixed w-full justify-center    py-6 z-50">
+      <div className=" lg:flex fixed w-full justify-center    py-6 z-50">
         <div className="flex gap-12 items-center">
-          <Link to="/">
+          <Link to="/" className="hidden lg:block">
             <img className="w-8 h-8" src="/home.svg" />
           </Link>
 
@@ -50,7 +50,7 @@ navigate(`/search?query=${search}`);
             </button>
           </form>
 
-          <Link to="/game">
+          <Link to="/game" className="hidden lg:block">
             <img className="w-8" src="/game.svg" />
           </Link>
         </div>
