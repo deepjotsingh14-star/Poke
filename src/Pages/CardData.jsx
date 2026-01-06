@@ -1,8 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
 import axios from "axios";
-import Card from "./Card";
+import Card from "./Card.jsx";
 
-const SWIPE_THRESHOLD = 80;
+const SWIPE_THRESHOLD = 60;
 
 const CardData = () => {
   const [redata, setRedata] = useState([]);
@@ -64,9 +64,10 @@ const CardData = () => {
   }, []);
 
   return (
-    <div className="flex relative   items-center h-full w-full">
+    <div className="flex relative lg:hidden py-8 px-4 flex-col gap-4  bg-black items-center h-[80%] w-full pt-4">
+       <h1 className='mb-8 text-white text-[10vw] font-[popbold]'>POKEMON CARDS</h1>
       <div
-        className="relative h-[80%] w-full   lg:hidden"
+        className="relative h-[80%] w-full pt-4   lg:hidden"
         onTouchStart={handleTouchStart}
         onTouchEnd={handleTouchEnd}
         onMouseDown={handleMouseDown}

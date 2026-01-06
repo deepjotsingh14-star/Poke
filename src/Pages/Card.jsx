@@ -10,11 +10,11 @@ const Card = ({ elem, idx, current, total }) => {
     const color = {
         water: {
             bg: "url('/noise.svg'), radial-gradient(circle, rgba(0,86,245,1) 0%, rgba(64,131,255,1) 41%)",
-            shadow: "0 0 5rem 8rem rgba(64,131,255,0.8)",
+            shadow: "0 0 4rem 2rem rgba(64,131,255,0.8)",
         },
         fire: {
             bg: "radial-gradient(circle, rgba(255,94,0,1) 0%, rgba(255,170,64,1) 45%)",
-            shadow: "0 0 5rem 8rem rgba(255,120,0,0.8)",
+            shadow: "0 0 4rem 2rem rgba(255,120,0,0.8)",
         },
         grass: {
             bg: "radial-gradient(circle, rgba(0,200,83,1) 0%, rgba(100,221,170,1) 45%)",
