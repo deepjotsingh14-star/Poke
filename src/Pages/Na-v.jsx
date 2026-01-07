@@ -33,15 +33,16 @@ const Nav = () => {
           </button>
         </form></div>
         <div className=" w-full flex justify-evenly">
-          <button>
-            <img src="/home.svg" className="h-8 w-8" />
-          </button>
-          <button>
-            <img src="/game.svg" className="h-8 w-8" />
-          </button>
-          <button>
-            <img src="/user.svg" className="h-8 w-8" />
-          </button>
+   
+          <Link to="/" className="h-8 w-8">
+            <img className="w-8 h-8" src="/home.svg" />
+          </Link>
+            <Link to="/game" className="h-8 w-8">
+            <img className="w-8" src="/game.svg" />
+          </Link>
+            <Link to="#" className="h-8 w-8 ">
+            <img className="w-8" src="/user.svg" />
+          </Link>
         </div>
       </div>
 

@@ -16,7 +16,7 @@ const SearchCard = () => {
     setLoading(true);
     try {
       const res = await axios.get(
-        `https://pokeapi.co/api/v2/pokemon?limit=100000`
+        `https://pokeapi.co/api/v2/pokemon?limit=1000`
       );
       setAllPokemon(res.data.results); // only name + url
     } catch (err) {
