@@ -62,10 +62,10 @@ const CardPages = ({ props }) => {
             style={{
               backgroundImage: `url('/noise.svg')`,
             }}
-          ></div>
+          ></div> */}
           <div className="absolute h-full w-full backdrop-blur-sm border border-white/30"  >
 
-          </div> */}
+          </div>
         </div>
         <img
           src={details.sprites?.other?.home?.front_default}
