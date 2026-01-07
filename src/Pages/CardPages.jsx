@@ -21,19 +21,19 @@ const CardPages = ({ props }) => {
         },
         fire: {
             bg: "  radial-gradient(circle, rgba(255,94,0,1) 0%, rgba(255,170,64,1) 45%)",
-            shadow: "0 0 4rem 2rem rgba(255,120,0,0.8)",
+            shadow: "0 0 4rem 4rem rgba(255,120,0,0.8)",
         },
         grass: {
             bg: "  radial-gradient(circle, rgba(0,200,83,1) 0%, rgba(100,221,170,1) 45%)",
-            shadow: "0 0 4rem 1.5rem rgba(0,200,83,0.8)",
+            shadow: "0 0 4rem 4rem rgba(0,200,83,0.8)",
         },
         normal: {
             bg: "  radial-gradient(circle, #ddd 0%, #bbb 45%)",
-            shadow: "0 0 3rem 1rem rgba(0,0,0,0.2)",
+            shadow: "0 0 4  rem 4rem rgba(0,0,0,0.2)",
         },
         poison:{
             bg:"radial-gradient(circle,rgba(208, 0, 255, 1) 0%, rgba(192, 97, 255, 1) 52%)",
-            shadow:"0 0 5rem 4rem rgba(192, 97, 255, 1)"
+            shadow:"0 0 4rem 4rem rgba(192, 97, 255, 1)"
         }
     };
       const type = details.types?.[0]?.type?.name || "normal";
@@ -41,16 +41,16 @@ const CardPages = ({ props }) => {
     // 🔹 Ab safely theme lo
     const theme = color[type] || color.normal;
   return (
- <div className="border h-90  bg-[#F9F8F6]   rounded-3xl overflow-hidden ">
-      <div className="h-full absolute z-2  ">
+ <div className="  lg:h-90 h-70 relative  bg-[#F9F8F6]  rounded-2xl lg:rounded-3xl overflow-hidden ">
+      <div className="h-full absolute z-2  p-3 flex  w-full  ">
 
-  <h1>{details.name}</h1>
+  <h1 className="font-[popbold] text-2xl first-letter:uppercase ">{details.name}</h1>
 
       </div>
      <div className="relative h-full rounded-3xl  w-full flex items-center justify-center">
                 <div className="absolute w-full h-full flex justify-center items-center  ">
                     <div
-                        className="h-28 w-28    rounded-full  bg-cover"
+                        className="lg:h-28 lg:w-28 h-18 w-18    rounded-full  bg-cover"
                               style={{
                             backgroundImage: theme.bg,
                             boxShadow: theme.shadow, 
