@@ -58,14 +58,14 @@ const CardPages = ({ props }) => {
             }}
           >
           </div>
-          <div className="h-full a w-full absolute  mix-blend-overlay  "
+          {/* <div className="h-full a w-full absolute  mix-blend-overlay  "
             style={{
               backgroundImage: `url('/noise.svg')`,
             }}
           ></div>
           <div className="absolute h-full w-full backdrop-blur-sm border border-white/30"  >
 
-          </div>
+          </div> */}
         </div>
         <img
           src={details.sprites?.other?.home?.front_default}
