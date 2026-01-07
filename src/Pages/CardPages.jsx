@@ -16,23 +16,23 @@ const CardPages = ({ props }) => {
   if (!details) return <p>Loading card...</p>;
     const color = {
         water: {
-            bg: "url('/noise.svg'), radial-gradient(circle, rgba(0,86,245,1) 0%, rgba(64,131,255,1) 41%)",
-            shadow: "0 0 4rem 4rem rgba(64,131,255,0.8)",
+            bg: "radial-gradient(circle, rgba(0,86,245,1) 0%, rgba(64,131,255,1) 41%)",
+            shadow: "0 0 3.5rem 4rem rgba(64,131,255,1)",
         },
         fire: {
-            bg: "url('/noise.svg'), radial-gradient(circle, rgba(255,94,0,1) 0%, rgba(255,170,64,1) 45%)",
+            bg: "  radial-gradient(circle, rgba(255,94,0,1) 0%, rgba(255,170,64,1) 45%)",
             shadow: "0 0 4rem 2rem rgba(255,120,0,0.8)",
         },
         grass: {
-            bg: " url('/noise.svg'), radial-gradient(circle, rgba(0,200,83,1) 0%, rgba(100,221,170,1) 45%)",
+            bg: "  radial-gradient(circle, rgba(0,200,83,1) 0%, rgba(100,221,170,1) 45%)",
             shadow: "0 0 4rem 1.5rem rgba(0,200,83,0.8)",
         },
         normal: {
-            bg: " url('/noise.svg'),radial-gradient(circle, #ddd 0%, #bbb 45%)",
+            bg: "  radial-gradient(circle, #ddd 0%, #bbb 45%)",
             shadow: "0 0 3rem 1rem rgba(0,0,0,0.2)",
         },
         poison:{
-            bg:" url('/noise.svg'),radial-gradient(circle,rgba(208, 0, 255, 1) 0%, rgba(192, 97, 255, 1) 52%)",
+            bg:"radial-gradient(circle,rgba(208, 0, 255, 1) 0%, rgba(192, 97, 255, 1) 52%)",
             shadow:"0 0 5rem 4rem rgba(192, 97, 255, 1)"
         }
     };
@@ -50,7 +50,7 @@ const CardPages = ({ props }) => {
      <div className="relative h-full rounded-3xl  w-full flex items-center justify-center">
                 <div className="absolute w-full h-full flex justify-center items-center  ">
                     <div
-                        className="h-28 w-28  border rounded-full  bg-cover"
+                        className="h-28 w-28    rounded-full  bg-cover"
                               style={{
                             backgroundImage: theme.bg,
                             boxShadow: theme.shadow, 
@@ -58,17 +58,22 @@ const CardPages = ({ props }) => {
                         }}
                     >      
                      </div>
-                      <div className="absolute h-full w-full backdrop-blur-md border border-white/30"  >
+                     <div className="h-full a w-full absolute  mix-blend-overlay  "
+                     style={{
+                        backgroundImage:  `url('/noise.svg')`,
+                     }}
+                     ></div>
+                        <div className="absolute h-full w-full backdrop-blur-sm border border-white/30"  >
 
-                      </div>
+                        </div>
                 </div>
-
+{/* 
                <img
                     src={details.sprites?.other?. home?.front_default}
                     alt={ details.name}
                     className="relative z-10 h-full   object-contain"
                     draggable={false}
-                /> 
+                />  */}
             </div>
  </div>
   );

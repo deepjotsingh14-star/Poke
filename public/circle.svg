@@ -1,0 +1,35 @@
+<svg viewBox="0 0 260 260" className="w-64 h-64">
+  <defs>
+    <radialGradient id="grad" fx="30%" fy="30%">
+      <stop offset="0%" stopColor="#6FA3FF" />
+      <stop offset="100%" stopColor="#0056F5" />
+    </radialGradient>
+
+    <filter id="grain">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="3" />
+      <feComponentTransfer>
+        <feFuncA type="table" tableValues="0 0.12" />
+      </feComponentTransfer>
+    </filter>
+
+    <filter id="outerShadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="16" stdDeviation="20" floodOpacity="0.35" />
+    </filter>
+  </defs>
+
+  <circle
+    cx="130"
+    cy="130"
+    r="90"
+    fill="transparent"
+    filter="url(#outerShadow)"
+  />
+
+  <circle
+    cx="130"
+    cy="130"
+    r="90"
+    fill="url(#grad)"
+    filter="url(#grain)"
+  />
+</svg>
